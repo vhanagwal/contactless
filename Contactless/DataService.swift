@@ -6,4 +6,9 @@
 //  Copyright © 2017 Vardhan Agrawal. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class DataService {
+    
+    static let shared = DataService()
+}
