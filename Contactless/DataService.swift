@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Firebase
+
+let databaseReference = Database.database().reference()
 
 class DataService {
     
     static let shared = DataService()
+    
+    private var _REF_CONTACTS = databaseReference.child("contacts")
+    
+    var REF_CONTACTS: DatabaseReference { return _REF_CONTACTS }
 }

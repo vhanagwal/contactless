@@ -8,14 +8,28 @@
 
 import UIKit
 
+@IBDesignable
 class MaterialView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    
+    @IBInspectable var cornerRadius: CGFloat = 5.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+        }
     }
-    */
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Configure the view for the selected state
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.25
+        layer.shadowOffset = CGSize(width: 0, height: 1.5)
+        layer.shadowRadius = 4.0
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+        
+        // Corner Radius
+        layer.cornerRadius = 10.0;
+    }
 }

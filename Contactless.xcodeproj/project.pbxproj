@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16E5DF1565997686ED550795 /* Pods_ContactlessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879439784A91912DE1BE7A23 /* Pods_ContactlessUITests.framework */; };
+		CBA919410BE3E8F02E8DB171 /* Pods_Contactless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD60B8D6D456EA83925F9C80 /* Pods_Contactless.framework */; };
+		DA7F83181F49F5F700870C27 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F83171F49F5F700870C27 /* AddContactVC.swift */; };
 		DA98289D1F3E2E880084D25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98289C1F3E2E880084D25E /* AppDelegate.swift */; };
 		DA98289F1F3E2E880084D25E /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98289E1F3E2E880084D25E /* ContactListVC.swift */; };
 		DA9828A21F3E2E880084D25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9828A01F3E2E880084D25E /* Main.storyboard */; };
@@ -17,9 +20,13 @@
 		DA9828C01F3E2E880084D25E /* ContactlessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828BF1F3E2E880084D25E /* ContactlessUITests.swift */; };
 		DA9828CE1F3E312F0084D25E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828CD1F3E312F0084D25E /* MaterialView.swift */; };
 		DA9828D01F3E314B0084D25E /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828CF1F3E314B0084D25E /* ContactCell.swift */; };
-		DA9828D21F3E316F0084D25E /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828D11F3E316F0084D25E /* ContactDetailVC.swift */; };
 		DA9828D41F3E31A70084D25E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828D31F3E31A70084D25E /* DataService.swift */; };
 		DA9828D81F3E37F10084D25E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9828D71F3E37F10084D25E /* Contact.swift */; };
+		DADD030E1F3E656C008388E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DADD030D1F3E656C008388E4 /* GoogleService-Info.plist */; };
+		DADD03101F3E683A008388E4 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD030F1F3E683A008388E4 /* MaterialTextField.swift */; };
+		DADD03121F3E6D00008388E4 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD03111F3E6D00008388E4 /* MaterialButton.swift */; };
+		DADD03141F451654008388E4 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD03131F451654008388E4 /* CircularImageView.swift */; };
+		F03CA32230AD895D465D9030 /* Pods_ContactlessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E765C88AC355B914E9609773 /* Pods_ContactlessTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C41AA722343EB3FE46063BA /* Pods-ContactlessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactlessUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactlessUITests/Pods-ContactlessUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		879439784A91912DE1BE7A23 /* Pods_ContactlessUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactlessUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0D4A8AF81ED5A567A3ACFC /* Pods-ContactlessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactlessTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactlessTests/Pods-ContactlessTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C87EAC8C6FBF56DC926E63C0 /* Pods-Contactless.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contactless.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contactless/Pods-Contactless.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7F83171F49F5F700870C27 /* AddContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		DA9828991F3E2E880084D25E /* Contactless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contactless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA98289C1F3E2E880084D25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA98289E1F3E2E880084D25E /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
@@ -56,9 +68,17 @@
 		DA9828C11F3E2E880084D25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9828CD1F3E312F0084D25E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		DA9828CF1F3E314B0084D25E /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
-		DA9828D11F3E316F0084D25E /* ContactDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
 		DA9828D31F3E31A70084D25E /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DA9828D71F3E37F10084D25E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DADD030D1F3E656C008388E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DADD030F1F3E683A008388E4 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		DADD03111F3E6D00008388E4 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		DADD03131F451654008388E4 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		DD60B8D6D456EA83925F9C80 /* Pods_Contactless.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contactless.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E765C88AC355B914E9609773 /* Pods_ContactlessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactlessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F8203822DCC46CF37375D7 /* Pods-Contactless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contactless.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contactless/Pods-Contactless.release.xcconfig"; sourceTree = "<group>"; };
+		F75799A23FA27337275C313F /* Pods-ContactlessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactlessUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactlessUITests/Pods-ContactlessUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA6C6DC5905A498B14C5B1FA /* Pods-ContactlessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactlessTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactlessTests/Pods-ContactlessTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA919410BE3E8F02E8DB171 /* Pods_Contactless.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03CA32230AD895D465D9030 /* Pods_ContactlessTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +102,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E5DF1565997686ED550795 /* Pods_ContactlessUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E5B725EDCEE8C1697EFC53E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C87EAC8C6FBF56DC926E63C0 /* Pods-Contactless.debug.xcconfig */,
+				F4F8203822DCC46CF37375D7 /* Pods-Contactless.release.xcconfig */,
+				AD0D4A8AF81ED5A567A3ACFC /* Pods-ContactlessTests.debug.xcconfig */,
+				FA6C6DC5905A498B14C5B1FA /* Pods-ContactlessTests.release.xcconfig */,
+				5C41AA722343EB3FE46063BA /* Pods-ContactlessUITests.debug.xcconfig */,
+				F75799A23FA27337275C313F /* Pods-ContactlessUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA9828901F3E2E880084D25E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +129,8 @@
 				DA9828B31F3E2E880084D25E /* ContactlessTests */,
 				DA9828BE1F3E2E880084D25E /* ContactlessUITests */,
 				DA98289A1F3E2E880084D25E /* Products */,
+				8E5B725EDCEE8C1697EFC53E /* Pods */,
+				F8E74579A552B1F688B9D606 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,14 +148,15 @@
 			isa = PBXGroup;
 			children = (
 				DA98289C1F3E2E880084D25E /* AppDelegate.swift */,
+				DA9828D31F3E31A70084D25E /* DataService.swift */,
 				DA9828D61F3E37DD0084D25E /* Controller */,
 				DA9828D51F3E37D40084D25E /* View */,
-				DA9828D31F3E31A70084D25E /* DataService.swift */,
 				DA9828A01F3E2E880084D25E /* Main.storyboard */,
 				DA9828A61F3E2E880084D25E /* Assets.xcassets */,
 				DA9828A81F3E2E880084D25E /* LaunchScreen.storyboard */,
 				DA9828AB1F3E2E880084D25E /* Info.plist */,
 				DA9828A31F3E2E880084D25E /* Contactless.xcdatamodeld */,
+				DADD030D1F3E656C008388E4 /* GoogleService-Info.plist */,
 			);
 			path = Contactless;
 			sourceTree = "<group>";
@@ -144,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				DA9828CD1F3E312F0084D25E /* MaterialView.swift */,
+				DADD03131F451654008388E4 /* CircularImageView.swift */,
+				DADD030F1F3E683A008388E4 /* MaterialTextField.swift */,
+				DADD03111F3E6D00008388E4 /* MaterialButton.swift */,
 				DA9828CF1F3E314B0084D25E /* ContactCell.swift */,
 			);
 			name = View;
@@ -153,10 +195,20 @@
 			isa = PBXGroup;
 			children = (
 				DA98289E1F3E2E880084D25E /* ContactListVC.swift */,
-				DA9828D11F3E316F0084D25E /* ContactDetailVC.swift */,
+				DA7F83171F49F5F700870C27 /* AddContactVC.swift */,
 				DA9828D71F3E37F10084D25E /* Contact.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F8E74579A552B1F688B9D606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD60B8D6D456EA83925F9C80 /* Pods_Contactless.framework */,
+				E765C88AC355B914E9609773 /* Pods_ContactlessTests.framework */,
+				879439784A91912DE1BE7A23 /* Pods_ContactlessUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA9828C41F3E2E880084D25E /* Build configuration list for PBXNativeTarget "Contactless" */;
 			buildPhases = (
+				B6A06ACEE358FAE9E3BC8730 /* [CP] Check Pods Manifest.lock */,
 				DA9828951F3E2E880084D25E /* Sources */,
 				DA9828961F3E2E880084D25E /* Frameworks */,
 				DA9828971F3E2E880084D25E /* Resources */,
+				02209B85E4693BD62878B282 /* [CP] Embed Pods Frameworks */,
+				128FB40136FFFBE450AD6CD2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA9828C71F3E2E880084D25E /* Build configuration list for PBXNativeTarget "ContactlessTests" */;
 			buildPhases = (
+				180ED80C6A6BBF80920F7CE7 /* [CP] Check Pods Manifest.lock */,
 				DA9828AC1F3E2E880084D25E /* Sources */,
 				DA9828AD1F3E2E880084D25E /* Frameworks */,
 				DA9828AE1F3E2E880084D25E /* Resources */,
+				365627FA74666B5E000DDA31 /* [CP] Embed Pods Frameworks */,
+				AEE599B7A56045987E58F5B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA9828CA1F3E2E880084D25E /* Build configuration list for PBXNativeTarget "ContactlessUITests" */;
 			buildPhases = (
+				D2180822EED64445CD32180E /* [CP] Check Pods Manifest.lock */,
 				DA9828B71F3E2E880084D25E /* Sources */,
 				DA9828B81F3E2E880084D25E /* Frameworks */,
 				DA9828B91F3E2E880084D25E /* Resources */,
+				6E8306240FB2182800A78E03 /* [CP] Embed Pods Frameworks */,
+				20BC21D200B1AD95DBBCA2C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9828AA1F3E2E880084D25E /* LaunchScreen.storyboard in Resources */,
+				DADD030E1F3E656C008388E4 /* GoogleService-Info.plist in Resources */,
 				DA9828A71F3E2E880084D25E /* Assets.xcassets in Resources */,
 				DA9828A21F3E2E880084D25E /* Main.storyboard in Resources */,
 			);
@@ -291,6 +353,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02209B85E4693BD62878B282 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Contactless/Pods-Contactless-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contactless/Pods-Contactless-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		128FB40136FFFBE450AD6CD2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contactless/Pods-Contactless-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		180ED80C6A6BBF80920F7CE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactlessTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20BC21D200B1AD95DBBCA2C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactlessUITests/Pods-ContactlessUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		365627FA74666B5E000DDA31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactlessTests/Pods-ContactlessTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8306240FB2182800A78E03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactlessUITests/Pods-ContactlessUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE599B7A56045987E58F5B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactlessTests/Pods-ContactlessTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A06ACEE358FAE9E3BC8730 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Contactless-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2180822EED64445CD32180E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactlessUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA9828951F3E2E880084D25E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,11 +513,14 @@
 				DA9828D01F3E314B0084D25E /* ContactCell.swift in Sources */,
 				DA9828D41F3E31A70084D25E /* DataService.swift in Sources */,
 				DA98289F1F3E2E880084D25E /* ContactListVC.swift in Sources */,
-				DA9828D21F3E316F0084D25E /* ContactDetailVC.swift in Sources */,
+				DADD03121F3E6D00008388E4 /* MaterialButton.swift in Sources */,
+				DADD03141F451654008388E4 /* CircularImageView.swift in Sources */,
 				DA9828D81F3E37F10084D25E /* Contact.swift in Sources */,
 				DA98289D1F3E2E880084D25E /* AppDelegate.swift in Sources */,
+				DADD03101F3E683A008388E4 /* MaterialTextField.swift in Sources */,
 				DA9828A51F3E2E880084D25E /* Contactless.xcdatamodeld in Sources */,
 				DA9828CE1F3E312F0084D25E /* MaterialView.swift in Sources */,
+				DA7F83181F49F5F700870C27 /* AddContactVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +672,7 @@
 		};
 		DA9828C51F3E2E880084D25E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C87EAC8C6FBF56DC926E63C0 /* Pods-Contactless.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H652T59SLE;
@@ -468,6 +686,7 @@
 		};
 		DA9828C61F3E2E880084D25E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4F8203822DCC46CF37375D7 /* Pods-Contactless.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H652T59SLE;
@@ -481,6 +700,7 @@
 		};
 		DA9828C81F3E2E880084D25E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0D4A8AF81ED5A567A3ACFC /* Pods-ContactlessTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +716,7 @@
 		};
 		DA9828C91F3E2E880084D25E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6C6DC5905A498B14C5B1FA /* Pods-ContactlessTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +732,7 @@
 		};
 		DA9828CB1F3E2E880084D25E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C41AA722343EB3FE46063BA /* Pods-ContactlessUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6NEP5C8ZW6;
@@ -525,6 +747,7 @@
 		};
 		DA9828CC1F3E2E880084D25E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75799A23FA27337275C313F /* Pods-ContactlessUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6NEP5C8ZW6;
@@ -556,6 +779,7 @@
 				DA9828C61F3E2E880084D25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA9828C71F3E2E880084D25E /* Build configuration list for PBXNativeTarget "ContactlessTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +788,7 @@
 				DA9828C91F3E2E880084D25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA9828CA1F3E2E880084D25E /* Build configuration list for PBXNativeTarget "ContactlessUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +797,7 @@
 				DA9828CC1F3E2E880084D25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
