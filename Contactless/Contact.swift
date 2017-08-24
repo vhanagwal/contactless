@@ -1,41 +1,61 @@
-//
-//  Contact.swift
-//  Contactless
-//
-//  Created by Vardhan Agrawal on 8/11/17.
-//  Copyright © 2017 Vardhan Agrawal. All rights reserved.
-//
+/**
+ * Copyright (c) 2017 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+ * distribute, sublicense, create a derivative work, and/or sell copies of the
+ * Software in any work that is designed, intended, or marketed for pedagogical or
+ * instructional purposes related to programming, coding, application development,
+ * or information technology. Permission for such use, copying, modification,
+ * merger, publication, distribution, sublicensing, creation of derivative works,
+ * or sale is expressly withheld.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 import UIKit
 
 struct Contact {
     
-    private var _userID: String
+    // MARK: Stored Properties
+    var userID: String
+    var name: String
+    var email: String
+    var phone: String
     
-    private var _name: String
-    private var _email: String
-    private var _phone: String
-    
-    var userID: String { return _userID }
-    
-    var name: String { return _name }
-    var email: String { return _email }
-    var phone: String { return _phone }
-    
+    // MARK: Default Initializer
     init() {
-        self._userID = ""
         
-        self._name = ""
-        self._email = ""
-        self._phone = ""
+        // Prevents crashes in case of empty data sets
+        self.userID = ""
+        self.name = ""
+        self.email = ""
+        self.phone = ""
     }
     
+    // MARK: Complete Initializer
     init(userID: String, data dictionary: Dictionary <String, AnyObject>) {
-        self._userID = userID
         
-        if let name = dictionary["name"] as? String { self._name = name } else { self._name = "" }
-        if let email = dictionary["email"] as? String { self._email = email } else { self._email = "" }
-        if let phone = dictionary["phone"] as? String { self._phone = phone } else { self._phone = "" }
+        self.userID = userID
+        
+        // Parses dictionary passed in from Firebase
+        if let name = dictionary["name"] as? String { self.name = name } else { self.name = "" }
+        if let email = dictionary["email"] as? String { self.email = email } else { self.email = "" }
+        if let phone = dictionary["phone"] as? String { self.phone = phone } else { self.phone = "" }
     }
     
 }
