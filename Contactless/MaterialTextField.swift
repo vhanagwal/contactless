@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -31,17 +32,21 @@ import UIKit
 
 @IBDesignable
 class MaterialTextField: UITextField {
-    
-    // Interface builder property of cornerRadius
-    @IBInspectable var cornerRadius: CGFloat = 5.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
+  
+  // Interface builder property of cornerRadius
+  @IBInspectable var cornerRadius: CGFloat = 5.0 {
+    didSet {
+      layer.cornerRadius = cornerRadius
     }
-
-    // Placeholder offset
-    override func textRect(forBounds bounds: CGRect) -> CGRect { return bounds.insetBy(dx: 10, dy: 0) }
-    
-    // Editing text offset
-    override func editingRect(forBounds bounds: CGRect) -> CGRect { return bounds.insetBy(dx: 10, dy: 0) }
+  }
+  
+  // Placeholder offset
+  override func textRect(forBounds bounds: CGRect) -> CGRect {
+    return bounds.insetBy(dx: 10, dy: 0)
+  }
+  
+  // Editing text offset
+  override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    return bounds.insetBy(dx: 10, dy: 0)
+  }
 }

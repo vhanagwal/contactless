@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -31,23 +32,23 @@ import UIKit
 
 @IBDesignable
 class MaterialButton: UIButton {
-
-    // Interface builder property of cornerRadius
-    @IBInspectable var cornerRadius: CGFloat = 5.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
+  
+  // Interface builder property of cornerRadius
+  @IBInspectable var cornerRadius: CGFloat = 5.0 {
+    didSet {
+      layer.cornerRadius = cornerRadius
     }
-    
-    // Overrides isEnabled property of UIButton
-    override var isEnabled: Bool {
-        didSet {
-            // Colors of different button states
-            if self.isEnabled == true {
-                self.titleLabel?.textColor = UIColor.lightGray
-            } else {
-                self.titleLabel?.textColor = UIColor.white
-            }
-        }
+  }
+  
+  // Overrides isEnabled property of UIButton
+  override var isEnabled: Bool {
+    didSet {
+      // Colors of different button states
+      if self.isEnabled == true {
+        self.titleLabel?.textColor = UIColor.lightGray
+      } else {
+        self.titleLabel?.textColor = UIColor.white
+      }
     }
+  }
 }

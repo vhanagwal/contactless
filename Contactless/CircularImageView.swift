@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -31,13 +32,13 @@ import UIKit
 
 @IBDesignable
 class CircularImageView: UIImageView {
+  
+  // Called upon rendering views
+  override func layoutSubviews() {
+    super.layoutSubviews()
     
-    // Called upon rendering views
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // Creates circles with any size of UIImageView
-        layer.cornerRadius = self.frame.height / 2
-        
-    }
+    // Creates circles with any size of UIImageView
+    layer.cornerRadius = self.frame.height / 2
+    
+  }
 }

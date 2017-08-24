@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -32,51 +33,71 @@ import Firebase
 
 
 class AddContactVC: UIViewController {
+  
+  // MARK: IBOutlet Connections
+  @IBOutlet weak var nameLabel: UITextField!
+  @IBOutlet weak var phoneLabel: UITextField!
+  @IBOutlet weak var emailAddress: UITextField!
+  @IBOutlet weak var imageView: CircularImageView!
+  
+  let keyboardOffset: CGFloat = -80
+  let yOrigin: CGFloat = 0
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    // MARK: IBOutlet Connections
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var phoneLabel: UITextField!
-    @IBOutlet weak var emailAddress: UITextField!
-    @IBOutlet weak var imageView: CircularImageView!
+    //Looks for single or multiple taps.
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+    view.addGestureRecognizer(tap)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        
-        view.endEditing(true)
-    }
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+  }
+  
+  //Calls this function when the tap is recognized.
+  func dismissKeyboard() {
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    view.endEditing(true)
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  func addToDatabase() {
     
-    func addToDatabase() {
-        
-        guard let name = nameLabel.text,
-            let phone = phoneLabel.text,
-            let email = emailAddress.text else { return }
-        
-        let newContact = DataService.shared.REF_CONTACTS.childByAutoId()
-        newContact.updateChildValues([
-            "name" : name,
-            "phone" : phone,
-            "email": email
-        ])
-        
-    }
+    guard let name = nameLabel.text,
+      let phone = phoneLabel.text,
+      let email = emailAddress.text else { return }
     
-    @IBAction func createContactTapped() {
-        
-        addToDatabase()
-        navigationController?.popToRootViewController(animated: true)
-    }
+    let newContact = DataService.shared.REF_CONTACTS.childByAutoId()
+    newContact.updateChildValues([
+      "name" : name,
+      "phone" : phone,
+      "email": email
+      ])
+    
+  }
+  
+  func keyboardWillShow() {
+    
+    // Moves the view up to show all text fields
+    self.view.frame.origin.y = keyboardOffset
+  }
+  
+  func keyboardWillHide() {
+    
+    // Returns the view to its original position when editing is complete
+    self.view.frame.origin.y = yOrigin
+    
+  }
+  
+  @IBAction func createContactTapped() {
+    
+    addToDatabase()
+    navigationController?.popToRootViewController(animated: true)
+  }
 }
 

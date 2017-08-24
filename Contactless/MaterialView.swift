@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -31,26 +32,26 @@ import UIKit
 
 @IBDesignable
 class MaterialView: UIView {
-    
-    // Interface builder cornerRadius property
-    @IBInspectable var cornerRadius: CGFloat = 5.0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
+  
+  // Interface builder cornerRadius property
+  @IBInspectable var cornerRadius: CGFloat = 5.0 {
+    didSet {
+      layer.cornerRadius = cornerRadius
     }
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // Configures shadows
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.25
-        layer.shadowOffset = CGSize(width: 0, height: 1.5)
-        layer.shadowRadius = 4.0
-        
-        // Miscellaneous properties
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
-
-    }
+    // Configures shadows
+    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowOpacity = 0.25
+    layer.shadowOffset = CGSize(width: 0, height: 1.5)
+    layer.shadowRadius = 4.0
+    
+    // Miscellaneous properties
+    layer.shouldRasterize = true
+    layer.rasterizationScale = UIScreen.main.scale
+    
+  }
 }

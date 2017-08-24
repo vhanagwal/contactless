@@ -5,7 +5,8 @@
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is * furnished to do so, subject to the following conditions:
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
@@ -30,32 +31,32 @@
 import UIKit
 
 struct Contact {
+  
+  // MARK: Stored Properties
+  var userID: String
+  var name: String
+  var email: String
+  var phone: String
+  
+  // MARK: Default Initializer
+  init() {
     
-    // MARK: Stored Properties
-    var userID: String
-    var name: String
-    var email: String
-    var phone: String
+    // Prevents crashes in case of empty data sets
+    self.userID = ""
+    self.name = ""
+    self.email = ""
+    self.phone = ""
+  }
+  
+  // MARK: Complete Initializer
+  init(userID: String, data dictionary: Dictionary <String, AnyObject>) {
     
-    // MARK: Default Initializer
-    init() {
-        
-        // Prevents crashes in case of empty data sets
-        self.userID = ""
-        self.name = ""
-        self.email = ""
-        self.phone = ""
-    }
+    self.userID = userID
     
-    // MARK: Complete Initializer
-    init(userID: String, data dictionary: Dictionary <String, AnyObject>) {
-        
-        self.userID = userID
-        
-        // Parses dictionary passed in from Firebase
-        if let name = dictionary["name"] as? String { self.name = name } else { self.name = "" }
-        if let email = dictionary["email"] as? String { self.email = email } else { self.email = "" }
-        if let phone = dictionary["phone"] as? String { self.phone = phone } else { self.phone = "" }
-    }
+    // Parses dictionary passed in from Firebase
+    self.name = dictionary["name"] as? String ?? ""
+    self.email = dictionary["email"] as? String ?? ""
+    self.phone = dictionary["phone"] as? String ?? ""
     
+  }
 }
