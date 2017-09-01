@@ -31,7 +31,7 @@
 import UIKit
 import Firebase
 
-class ContactListVC: UIViewController {
+class ContactListVC: UITableViewController {
   
   // TableView from Interface Builder
   @IBOutlet var tableview: UITableView!
@@ -41,12 +41,7 @@ class ContactListVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // TableView setup
-    self.tableview.delegate = self
-    self.tableview.dataSource = self
-    self.tableview.allowsSelection = false
-    
+
     observeDatabase()
   }
   
@@ -86,14 +81,14 @@ class ContactListVC: UIViewController {
   }
 }
 
-extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
+extension ContactListVC {
   
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     return contacts.count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     // Creates reusable cell
     let cell = tableview.dequeueReusableCell(withIdentifier: "contactCell") as! ContactCell
