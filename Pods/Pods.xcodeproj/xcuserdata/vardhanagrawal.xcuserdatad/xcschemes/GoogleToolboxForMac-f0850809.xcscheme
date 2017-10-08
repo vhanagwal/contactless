@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BB2224B3EEA1CE4CBEDFC1B7F54035F"
-               BuildableName = "Pods_ContactlessUITests.framework"
-               BlueprintName = "Pods-ContactlessUITests"
+               BlueprintIdentifier = "8159F94E49D9B443DE18F0F8B38078B8"
+               BuildableName = "GoogleToolboxForMac.framework"
+               BlueprintName = "GoogleToolboxForMac-f0850809"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5BB2224B3EEA1CE4CBEDFC1B7F54035F"
-            BuildableName = "Pods_ContactlessUITests.framework"
-            BlueprintName = "Pods-ContactlessUITests"
+            BlueprintIdentifier = "8159F94E49D9B443DE18F0F8B38078B8"
+            BuildableName = "GoogleToolboxForMac.framework"
+            BlueprintName = "GoogleToolboxForMac-f0850809"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
