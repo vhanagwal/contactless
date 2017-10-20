@@ -33,7 +33,6 @@ import UIKit
 struct Contact {
   
   // MARK: Stored Properties
-  var userID: String
   var name: String
   var email: String
   var phone: String
@@ -42,21 +41,16 @@ struct Contact {
   init() {
     
     // Prevents crashes in case of empty data sets
-    self.userID = ""
     self.name = ""
     self.email = ""
     self.phone = ""
   }
   
   // MARK: Complete Initializer
-  init(userID: String, data dictionary: Dictionary <String, AnyObject>) {
+  init(name: String, email: String, phone: String) {
     
-    self.userID = userID
-    
-    // Parses dictionary passed in from Firebase
-    self.name = dictionary["name"] as? String ?? ""
-    self.email = dictionary["email"] as? String ?? ""
-    self.phone = dictionary["phone"] as? String ?? ""
-    
+    self.name = name
+    self.email = email
+    self.phone = phone
   }
 }

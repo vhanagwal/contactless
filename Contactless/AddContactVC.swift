@@ -29,8 +29,6 @@
  */
 
 import UIKit
-import Firebase
-
 
 class AddContactVC: UIViewController {
   
@@ -66,18 +64,14 @@ class AddContactVC: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func addToDatabase() {
+  func addContact() {
     
     guard let name = nameLabel.text,
       let phone = phoneLabel.text,
       let email = emailAddress.text else { return }
     
-    let newContact = DataService.shared.REF_CONTACTS.childByAutoId()
-    newContact.updateChildValues([
-      "name" : name,
-      "phone" : phone,
-      "email": email
-      ])
+    DataSource.shared.contactArray.append(Contact(name: name, email: email, phone: phone))
+    print(DataSource.shared.contactArray)
     
   }
   
@@ -96,7 +90,7 @@ class AddContactVC: UIViewController {
   
   @IBAction func createContactTapped() {
     
-    addToDatabase()
+    addContact()
     navigationController?.popToRootViewController(animated: true)
   }
 }

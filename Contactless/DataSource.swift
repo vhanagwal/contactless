@@ -29,14 +29,13 @@
  */
 
 import UIKit
-import Firebase
 
-let databaseReference = Database.database().reference()
-
-class DataService {
+class DataSource {
   
-  static let shared = DataService()
+  static let shared = DataSource()
   
-  var REF_CONTACTS: DatabaseReference = databaseReference.child("contacts")
-  
+  var contactArray: [Contact] = [
+    Contact(name: "Bill Robinson", email: "bill@example.com", phone: "+1 (555) 932-8399"),
+    Contact(name: "Anne Reed", email: "anne@example.com", phone: "+1 (555) 839-1421")
+  ]
 }

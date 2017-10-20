@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GTMSessionFetcher.xcscheme</key>
+		<key>DZNEmptyDataSet.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleToolboxForMac-Defines-NSData+zlib.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleToolboxForMac-f0850809.xcscheme</key>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

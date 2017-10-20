@@ -29,7 +29,6 @@
  */
 
 import UIKit
-import Firebase
 
 class ContactListVC: UITableViewController {
   
@@ -39,10 +38,13 @@ class ContactListVC: UITableViewController {
   // Contacts array declaration
   var contacts: [Contact] = []
   
+  var timer: Timer?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    observeDatabase()
+    
+    // Gets data from artificial database
+      self.getData()
   }
   
   override func didReceiveMemoryWarning() {
@@ -56,28 +58,30 @@ class ContactListVC: UITableViewController {
     }
   }
   
-  // Observes the database for changes
-  func observeDatabase() {
+  // Creates artificial delay to getData()
+  func getData() {
+    timer = Timer.scheduledTimer(timeInterval: TimeInterval(Int(arc4random_uniform(15))), target: self, selector: #selector(retrieve), userInfo: nil, repeats: false)
+  }
+  
+  // Retrieves data
+  func retrieve() {
+    // Randomly creates an error
+    let error = randomBool()
     
-    DataService.shared.REF_CONTACTS.observe(.value, with: { (snapshots) in
-      
-      if let snapshots = snapshots.children.allObjects as? [DataSnapshot] {
-        
-        self.contacts = []
-        
-        for snapshot in snapshots {
-          
-          if let dictionary = snapshot.value as? Dictionary <String, AnyObject> {
-            
-            let key = snapshot.key
-            let contact = Contact(userID: key, data: dictionary)
-            self.contacts.append(contact)
-          }
-        }
-      }
-      
-      self.tableview.reloadData()
-    })
+    if !error {
+      contacts = DataSource.shared.contactArray
+    } else if error {
+      contacts = []
+    }
+    self.tableview.reloadData()
+  }
+  
+  func randomBool() -> Bool {
+    return arc4random_uniform(2) == 0
+  }
+  
+  @IBAction func reloadButtonTapped(_ sender: UIBarButtonItem) {
+     getData()
   }
 }
 
