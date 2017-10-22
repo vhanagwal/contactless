@@ -11,13 +11,11 @@ target 'Contactless' do
   target 'ContactlessTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Firebase'
   end
   
   target 'ContactlessUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Firebase'
   end
   
 end

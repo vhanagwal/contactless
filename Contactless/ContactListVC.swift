@@ -92,6 +92,14 @@ extension ContactListVC {
     return contacts.count
   }
   
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      contacts.remove(at: indexPath.row)
+      DataSource.shared.contactArray = contacts
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+  }
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     // Creates reusable cell
@@ -106,4 +114,3 @@ extension ContactListVC {
     return cell
   }
 }
-
